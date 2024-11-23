@@ -27,6 +27,7 @@ return {
           reveal_file = vim.fn.getcwd()
         end
       end
+
       require('neo-tree.command').execute {
         action = 'focus', -- OPTIONAL, this is the default value
         source = 'filesystem', -- OPTIONAL, this is the default value
@@ -35,5 +36,20 @@ return {
         reveal_force_cwd = true, -- change cwd without asking if needed
       }
     end, { desc = 'Open [N]eoTree in current working directory' })
+
+    -- The next two lines disable the Neovim default file browser netrw
+    -- (without netrw will flash before neotree shows up)
+    vim.g.loaded_netrw = 1
+    vim.g.loaded_netrwPlugin = 1
+
+    require('neo-tree').setup {
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = false,
+        },
+        hijack_netrw_behavior = 'open_current',
+      },
+    }
   end,
 }
