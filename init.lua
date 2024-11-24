@@ -919,6 +919,9 @@ require('lazy').setup({
       --
       require('mini.pairs').setup()
 
+      -- Add :git command for easier git execution
+      require('mini.git').setup()
+
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin
