@@ -12,6 +12,7 @@ The following package managers (and language-dev-kits) are recommended:
   - `tar -C /usr/local -xzf go[version].linux-amd64.tar.gz`
   - add `/usr/local/go/bin` to the `$PATH` (`~/.profile` / `~/.bashrc`)
 - SKDMAN!
+  - `curl -s "https://get.sdkman.io" | bash`
 
 
 ## Nerd-Fonts
