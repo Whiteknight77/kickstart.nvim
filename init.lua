@@ -673,6 +673,9 @@ require('lazy').setup({
         -- NOTE: All servers Mason shall install, that are no LSP-Servers below (formatters, etc.)
         -- Not a clean but a useful implementation.
         ast_grep = {}, -- Not working with Java
+        biome = {},
+        prettier = {},
+        prettierd = {},
         --clang_format = {},
       }
 
@@ -740,7 +743,14 @@ require('lazy').setup({
         }
       end,
       formatters_by_ft = {
-        lua = { 'stylua' },
+        lua = { 'stylua', 'ast_grep' },
+
+        json = { 'biome', 'prettierd', 'prettier' },
+        jsonc = { 'biome', 'prettierd', 'prettier' },
+        hjson = { 'biome', 'prettierd', 'prettier' },
+
+        css = { 'prettierd', 'prettier', 'ast_grep' },
+
         --java = { 'ast-grep' }, Doesnt work
         --
         -- Conform can also run multiple formatters sequentially
