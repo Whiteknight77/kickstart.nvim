@@ -745,11 +745,29 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua', 'ast_grep' },
 
-        json = { 'biome', 'prettierd', 'prettier' },
-        jsonc = { 'biome', 'prettierd', 'prettier' },
-        hjson = { 'biome', 'prettierd', 'prettier' },
+        json = {
+          'biome',
+          -- 'prettierd',
+          -- 'prettier',
+        },
+        jsonc = {
+          'biome',
+          -- 'prettierd',
+          -- 'prettier',
+        },
+        hjson = {
+          'biome',
+          -- 'prettierd',
+          -- 'prettier',
+        },
 
-        css = { 'prettierd', 'prettier', 'ast_grep' },
+        css = {
+          'prettierd',
+          'prettier',
+          'ast_grep',
+        },
+
+        python = { 'ast_grep' },
 
         --java = { 'ast-grep' }, Doesnt work
         --
