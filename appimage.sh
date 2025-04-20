@@ -9,7 +9,7 @@ echo ""
 if [ $(id -u) -eq 0 ]
 then
 	echo "Script executed as root. curl nvim.appimage to /bin/nvim.appimage"
-	curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -o /bin/nvim.appimage
+	curl -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage -o /bin/nvim.appimage
 	chmod +x /bin/nvim.appimage
 	if command -v nvim 2>&1 >/dev/null
 	then
@@ -26,11 +26,16 @@ then
 
 # Script is not executed as root. Try with sudo.
 else
+	# Before trying sudo check for doas and if existent set alias
+	if command -v doas 2>&1 >/dev/null
+ 		alias sudo="doas"
+   	fi
+    
 	# Check if sudo is available
 	if command -v sudo 2>&1 >/dev/null
 	then
 		echo "Script executed as non root user. Trying with sudo. curl nvim.appimage to /bin/nvim.appimage"
-		sudo curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -o /bin/nvim.appimage
+		sudo curl -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage -o /bin/nvim.appimage
 		sudo chmod +x /bin/nvim.appimage
 		if ! command -v nvim 2>&1 >/dev/null
 		then
