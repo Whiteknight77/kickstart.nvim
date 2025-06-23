@@ -32,8 +32,9 @@ To develop for ESP32 install required tools as described in https://docs.espress
 
 ## OneTerm
 
-### Install external tools
+## Install external tools
 
+- treesitter
 - fzf
   - `apt install fzf`
 - ripgrep
