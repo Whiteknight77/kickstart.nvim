@@ -2,8 +2,6 @@
 --
 -- The currently used file manager is *Neo-Tree*
 
--- TODO: configure neotree to be the default filemanager on opening a directory
-
 return {
   'nvim-neo-tree/neo-tree.nvim',
   branch = 'v3.x', -- there will be no important changes in one branch so nothing should break with an update
