@@ -25,23 +25,28 @@ The following package managers (and language-dev-kits) are recommended:
 
 ### Arduino / ESP
 
-To develop for ESP32 install required tools as described in https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/linux-macos-setup.html
+To develop for ESP32 install required tools as described in `https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/linux-macos-setup.html`
 
 ***Recommendation:** use `~/.local/esp/` instead of `~/esp/`*
+
+### LaTeX
+
+Install *TeXpresso* as live renderer following the guide on `https://github.com/let-def/texpresso/blob/main/INSTALL.md`
 
 
 ## OneTerm
 
 ## Install external tools
 
-- treesitter
-- fzf
+- *treesitter*
+- *fzf*
   - `apt install fzf`
-- ripgrep
+- *ripgrep*
   - `apt install ripgrep`
   - alternatively if rust is installed and working: `cargo install ripgrep`
-- lazygit
+- *lazygit*
   - `go install github.com/jesseduffield/lazygit@latest`
   - no apt package
-- gitui
+- *gitui*
   - `cargo install gitui` - 2024-11-22 compiler errors
+
