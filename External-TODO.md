@@ -49,4 +49,5 @@ Install *TeXpresso* as live renderer following the guide on `https://github.com/
   - no apt package
 - *gitui*
   - `cargo install gitui` - 2024-11-22 compiler errors
+- *unzip* (needed for some Mason packages)
 
