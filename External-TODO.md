@@ -38,7 +38,10 @@ Install *TeXpresso* as live renderer following the guide on `https://github.com/
 
 ## Install external tools
 
-- *treesitter*
+- *treesitter* (`tree-sitter`)
+  - `pacman -S tree-sitter tree-sitter-cli`
+  - *don't forget the cli!*
+  - Also add other treesitter-subpackages if needed
 - *fzf*
   - `apt install fzf`
 - *ripgrep*
