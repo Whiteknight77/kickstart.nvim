@@ -619,7 +619,7 @@ require('lazy').setup({
 
         arduino_language_server = {},
 
-        pylyzer = {}, -- Kickstart-Recommendation
+        -- pylyzer = {}, -- Kickstart-Recommendation
 
         rust_analyzer = {
           settings = {
