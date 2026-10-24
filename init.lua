@@ -615,11 +615,7 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
-        clangd = {}, -- Kickstart-Recommendation
-
         arduino_language_server = {},
-
-        -- pylyzer = {}, -- Kickstart-Recommendation
 
         rust_analyzer = {
           settings = {
@@ -735,7 +731,7 @@ require('lazy').setup({
         -- Disable "format_on_save lsp_fallback" for languages that don't
         -- have a well standardized coding style. You can add additional
         -- languages here or re-enable it for the disabled ones.
-        local disable_filetypes = { c = true, cpp = true }
+        -- local disable_filetypes = { c = true, cpp = true }
         local lsp_format_opt
         if disable_filetypes[vim.bo[bufnr].filetype] then
           lsp_format_opt = 'never'
@@ -748,7 +744,7 @@ require('lazy').setup({
         }
       end,
       formatters_by_ft = {
-        lua = { 'stylua', 'ast_grep' },
+        lua = { 'stylua' },
 
         json = {
           'biome',
@@ -769,13 +765,8 @@ require('lazy').setup({
         css = {
           'prettierd',
           'prettier',
-          'ast_grep',
         },
 
-        python = { 'ast_grep' },
-
-        --java = { 'ast-grep' }, Doesnt work
-        --
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
@@ -1062,4 +1053,4 @@ require('lazy').setup({
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=4 sts=4 sw=4 net
+-- vim: ts=4 sts=4 sw=4
