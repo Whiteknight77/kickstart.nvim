@@ -650,33 +650,16 @@ require('lazy').setup({
           },
         },
 
-        lua_ls = {
-          -- cmd = {...},
-          -- filetypes = { ...},
-          -- capabilities = {},
-          settings = {
-            Lua = {
-              completion = {
-                callSnippet = 'Replace',
-              },
-              -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-              -- diagnostics = { disable = { 'missing-fields' } },
-            },
-          },
-        },
-
         pyright = {}, -- Python LS
 
         texlab = {}, -- LaTeX LS
-
-        clang_format = {},
       }
 
       -- Other tools that mason shall install:
       -- (place linters, formatters, etc here)
       local tools = {
         'stylua', -- Used to format Lua code
-        'ast-grep',
+        -- 'ast-grep',
         'biome',
         'prettier',
         'prettierd',
@@ -967,6 +950,7 @@ require('lazy').setup({
   },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
+    branch = 'master',
     build = ':TSUpdate',
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
