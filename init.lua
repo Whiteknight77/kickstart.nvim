@@ -669,7 +669,7 @@ require('lazy').setup({
 
         texlab = {}, -- LaTeX LS
 
-        --clang_format = {},
+        clang_format = {},
       }
 
       -- Other tools that mason shall install:
